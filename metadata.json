@@ -1,0 +1,8 @@
+{
+  "name": "NutriPsi - Gestão Nutricional",
+  "description": "Plataforma completa para nutricionistas com prescrição dietética, análise de macronutrientes e gestão de pacientes.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

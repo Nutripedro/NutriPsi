@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-nutrio-green: #22C55E;
+  --color-nutrio-green-dark: #16a34a;
+  --color-nutrio-purple: #A855F7;
+  --color-nutrio-bg: #F9FAFB;
+  --color-nutrio-sidebar: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-nutrio-bg text-slate-900 font-sans;
+  }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-2 rounded-lg transition-colors cursor-pointer text-slate-600 hover:bg-slate-100;
+  }
+  
+  .sidebar-item-active {
+    @apply bg-nutrio-green text-white hover:bg-nutrio-green-dark;
+  }
+  
+  .patient-menu-item {
+    @apply flex items-center gap-3 px-4 py-2 rounded-lg transition-colors cursor-pointer text-slate-500 hover:bg-slate-50 text-sm;
+  }
+  
+  .patient-menu-item-active {
+    @apply text-nutrio-green font-medium;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm p-6;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nutrio-green/20 focus:border-nutrio-green transition-all;
+  }
+}
